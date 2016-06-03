@@ -1,6 +1,6 @@
 package world.items;
 
-public class Item {
+public abstract class Item {
 
 	private int itemLevel = 1;
 	
