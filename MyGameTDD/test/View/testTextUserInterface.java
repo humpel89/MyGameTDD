@@ -10,12 +10,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class testTextUserInterface {
-
-	
 	
 	TextUserInterface ui;
-	//Scanner sc = new Scanner(System.console().readLine());
-	
 	private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
 	
@@ -50,8 +46,6 @@ public class testTextUserInterface {
 		assertTrue(testMessage.matches(outContent.toString()));
 	}
 	
-	
-	
 	@Test
 	public void out() {
 	    System.out.print("hello");
@@ -59,15 +53,19 @@ public class testTextUserInterface {
 	}
 	
 	@Test
-	public void outWithMatches() {
+	public void testSysoWithMatches() {
 	    System.out.print("hello");
 	    assertTrue("hello".matches(outContent.toString()));
+	    System.out.print("NEWHELLO");
+	    assertEquals("helloNEWHELLO", outContent.toString());
 	}
 
 	@Test
-	public void err() {
+	public void testSysoWithErr() {
 	    System.err.print("hello again");
 	    assertEquals("hello again", errContent.toString());
+	    System.err.print("NEWHELLO");
+	    assertEquals("hello againNEWHELLO", errContent.toString());
 	}
 
 }
