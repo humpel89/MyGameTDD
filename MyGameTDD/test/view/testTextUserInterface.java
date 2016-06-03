@@ -1,4 +1,4 @@
-package View;
+package view;
 
 import static org.junit.Assert.*;
 
@@ -8,6 +8,8 @@ import java.io.PrintStream;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import view.TextUserInterface;
 
 public class testTextUserInterface {
 	
