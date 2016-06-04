@@ -11,7 +11,7 @@ import org.junit.Test;
 
 import view.TextUserInterface;
 
-public class testTextUserInterface {
+public class TestTextUserInterface {
 	
 	TextUserInterface ui;
 	private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();

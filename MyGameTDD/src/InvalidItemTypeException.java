@@ -1,4 +1,4 @@
-package world.items;
+
 
 public class InvalidItemTypeException extends Exception {
 
