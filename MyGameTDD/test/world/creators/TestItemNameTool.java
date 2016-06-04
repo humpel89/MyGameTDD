@@ -8,9 +8,7 @@ import world.creators.ItemNameTool;
 import world.items.resources.Quality;
 import world.items.resources.WeaponType;
 
-public class ItemNameToolTest {
-
-	int amountOfNames = 5;
+public class TestItemNameTool {
 
 	@Test
 	public void testConstructRandomWeaponName() {

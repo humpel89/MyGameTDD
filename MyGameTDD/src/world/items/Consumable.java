@@ -1,5 +1,18 @@
 package world.items;
 
-public class Consumable extends Item {
+import world.items.resources.FoodType;
+import world.items.resources.Quality;
 
+public class Consumable extends Item  {
+
+	private int level;
+	private Quality quality;
+	private FoodType type;
+	
+	public Consumable(int level, Quality quality, FoodType type){
+		this.level = level;
+		this.quality = quality;
+		this.type = type;
+	}
+	
 }

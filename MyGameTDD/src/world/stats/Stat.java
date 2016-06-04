@@ -1,4 +1,4 @@
-package world.items.stats;
+package world.stats;
 
 public enum Stat {
 	STRENGTH, AGILITY, MAGIC

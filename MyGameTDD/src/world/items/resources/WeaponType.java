@@ -1,6 +1,6 @@
 package world.items.resources;
 
-import world.items.stats.Stat;
+import world.stats.Stat;
 
 public enum WeaponType {
 	AXE(2.0, Stat.STRENGTH),
