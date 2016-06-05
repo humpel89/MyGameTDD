@@ -6,31 +6,31 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import exceptions.InvalidItemTypeException;
 import world.creators.ItemCreator;
 import world.items.Item;
-import world.items.resources.ArmorType;
-import world.items.resources.FoodType;
-import world.items.resources.Quality;
-import world.items.resources.WeaponType;
+import world.items.resources.ItemType;
 
 public class TestItemCreator {
 	
-	ItemCreator creator = new ItemCreator();
-	int level = 10;
-	WeaponType weaponType;
-	ArmorType armorType;
-	FoodType foodType;
+	ItemCreator ic = new ItemCreator();
+	Item item;
+	int level = 1;
 	
 	@Before
 	public void setUp() throws Exception {
-		weaponType = WeaponType.AXE;
-		armorType = ArmorType.LIGHTLEATHER;
-		foodType = FoodType.FOOD;
-		
+		ic = new ItemCreator();
 	}
 
 	@After
 	public void tearDown() throws Exception {
+		item = null;
+	}
+	
+	@Test
+	public void testCreateRandomLoot() throws InvalidItemTypeException{
+		item = ic.createLoot(level, ItemType.WEAPON);
+		System.out.println(item.getItemName());
 	}
 	
 //	@Test

@@ -13,20 +13,28 @@ public class Weapon extends Equipment {
 	private WeaponType type;
 	private Stat mainStat;
 	
+	public Weapon() {
+		this.name = generateWeaponName();
+		// TODO Auto-generated constructor stub
+	}
+		
 	public Weapon(int level, Quality quality, WeaponType type){
 		this.level = level;
 		this.quality = quality;
 		this.type = type;
-		//this.name = generateWeaponName();
+		//
 		//this.mainStat = type.getMainStat();
 	}
 	
 	
 	
-//	private String generateWeaponName() { 
-//		return itemNameTool.constructRandomWeaponName(quality, type);
-//	}
+	private String generateWeaponName() { 
+		ItemNameTool itemNameTool = new ItemNameTool();
+		return itemNameTool.constructRandomWeaponName(quality, type);
+	}
 	
+
+
 	@Override
 	public String toString(){
 		return name;
