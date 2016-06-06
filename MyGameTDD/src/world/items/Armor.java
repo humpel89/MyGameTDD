@@ -1,8 +1,8 @@
 package world.items;
 
+import world.builders.ItemNameBuilder;
 import world.items.resources.ArmorType;
 import world.items.resources.Quality;
-import world.creators.ItemNameTool;
 
 public class Armor extends Equipment {
 	
@@ -17,16 +17,20 @@ public class Armor extends Equipment {
 		this.level = level;
 		this.quality = quality;
 		this.type = type;
-		//this.name = generateArmorName();
+		this.name = generateArmorName();
 	}
 	
+	public Armor() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public int getItemLevel(){
 		return level;
 	}
 	
-//	private String generateArmorName() { 
-//		return ItemNameTool.constructRandomArmorName(quality, type);
-//	}
+	private String generateArmorName() { 
+		return ItemNameBuilder.constructRandomArmorName(quality, type);
+	}
 	
 	@Override
 	public String toString(){

@@ -5,14 +5,15 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import world.items.resources.WeaponType;
+
 public class TestWeapon {
 
 	Weapon weapon;
 	
 	@Before
 	public void setUp() throws Exception {
-		//TODO
-		//weapon = new Weapon(WeaponType.AXE);
+		weapon = new Weapon(WeaponType type, EquipmentStats stats);
 	}
 
 	@Test

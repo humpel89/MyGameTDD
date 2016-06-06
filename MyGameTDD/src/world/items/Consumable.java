@@ -14,5 +14,9 @@ public class Consumable extends Item  {
 		this.quality = quality;
 		this.type = type;
 	}
+
+	public Consumable() {
+		// TODO Auto-generated constructor stub
+	}
 	
 }

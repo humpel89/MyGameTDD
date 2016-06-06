@@ -1,10 +1,10 @@
-package world.creators;
+package world.builders;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import world.creators.ItemNameTool;
+import world.builders.ItemNameBuilder;
 import world.items.resources.Quality;
 import world.items.resources.WeaponType;
 
@@ -12,12 +12,11 @@ public class TestItemNameTool {
 
 	@Test
 	public void testConstructRandomWeaponName() {
-		ItemNameTool nameTool = new ItemNameTool();
-		System.out.println(nameTool.constructRandomWeaponName(Quality.COMMON, WeaponType.AXE));
-		System.out.println(nameTool.constructRandomWeaponName(Quality.UNCOMMON, WeaponType.BROADSWORD));
-		System.out.println(nameTool.constructRandomWeaponName(Quality.RARE, WeaponType.BROADSWORD));
-		System.out.println(nameTool.constructRandomWeaponName(Quality.EPIC, WeaponType.DAGGER));
-		System.out.println(nameTool.constructRandomWeaponName(Quality.LEGENDARY, WeaponType.BOW));
+		System.out.println(ItemNameBuilder.constructRandomWeaponName(Quality.COMMON, WeaponType.AXE));
+		System.out.println(ItemNameBuilder.constructRandomWeaponName(Quality.UNCOMMON, WeaponType.BROADSWORD));
+		System.out.println(ItemNameBuilder.constructRandomWeaponName(Quality.RARE, WeaponType.BROADSWORD));
+		System.out.println(ItemNameBuilder.constructRandomWeaponName(Quality.EPIC, WeaponType.DAGGER));
+		System.out.println(ItemNameBuilder.constructRandomWeaponName(Quality.LEGENDARY, WeaponType.BOW));
 	}
 
 	@Test

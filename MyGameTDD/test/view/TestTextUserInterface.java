@@ -14,8 +14,8 @@ import view.TextUserInterface;
 public class TestTextUserInterface {
 	
 	TextUserInterface ui;
-	private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-	private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
+	private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+	private ByteArrayOutputStream errContent = new ByteArrayOutputStream();
 	
 	@Before
 	public void setUp() {
@@ -70,4 +70,5 @@ public class TestTextUserInterface {
 	    assertEquals("hello againNEWHELLO", errContent.toString());
 	}
 
+	
 }

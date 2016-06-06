@@ -3,40 +3,67 @@ package world.items;
 import world.items.resources.Quality;
 import world.items.resources.WeaponType;
 import world.stats.Stat;
-import world.creators.ItemNameTool;
 
-public class Weapon extends Equipment {
-	
-	private String name;
-	private int level;
-	private Quality quality;
+public class Weapon extends Equipment implements SetAndGetEquipmentStats {
+
 	private WeaponType type;
 	private Stat mainStat;
+	private double damage;
 	
-	public Weapon() {
-		this.name = generateWeaponName();
-		// TODO Auto-generated constructor stub
-	}
-		
-	public Weapon(int level, Quality quality, WeaponType type){
-		this.level = level;
-		this.quality = quality;
+	public Weapon(WeaponType type, EquipmentStats stats){
 		this.type = type;
-		//
-		//this.mainStat = type.getMainStat();
+		setStats(stats);
 	}
-	
-	
-	
-	private String generateWeaponName() { 
-		ItemNameTool itemNameTool = new ItemNameTool();
-		return itemNameTool.constructRandomWeaponName(quality, type);
-	}
-	
 
+	void setStats(EquipmentStats stats) {
+		//setQuality(stats.getQuality());
+		this.mainStat = type.getMainStat();
+	}
+
+	public double getWeaponDamage() {
+		return damage;
+	}
+
+	private void setWeaponType(WeaponType type) {
+		this.type = type;
+	}
 
 	@Override
-	public String toString(){
-		return name;
+	public void setQuality(Quality quality) {
+		// TODO Auto-generated method stub
+		
 	}
+
+	@Override
+	public Quality getQuality() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setEquipmentLevel(int level) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Quality getEquipmentLevel() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setName(String name) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
 }
